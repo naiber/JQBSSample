@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    $(".start").css({"background-color":"transparent"})
 
     $('.carousel').carousel({
         interval:3000,
@@ -14,14 +15,16 @@ $(document).ready(function () {
         var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
         deltaI += delta
         console.log("delta--> ",deltaI)
-        if(delta > 0) {
+        console.log("windows.scrollTop-> ",$(window).scrollTop())
+        if($(window).scrollTop()<150) {
             //scroll up
-            console.log("scroll up")
+            $('.start').css({"position":"absolute","background-color":"transparent"});
+            console.log("scroll up - scrollTop-> ",$(window).scrollTop())
         }
-        else{
+        else if(delta < 0){
             //scroll down
-            $(".myNav").css({"position":"fixed","background-color":"#4b4c51"});
-            console.log("scroll down")
+            $(".start").css({"position":"fixed","background-color":"#4b4c51"});
+            console.log("scroll down-> ",delta)
         }
     });
 })

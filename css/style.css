@@ -9,16 +9,16 @@
 }
 @media screen and (max-width : 480px){
     .start{
-
     }
 }
-.start{
-    margin:5px auto 0 2%;
+.start {
     position:absolute;
     top: 0;
     right: 0;
     left: 0;
     z-index: 20;
+    padding-top: 3px;
+    padding-bottom: 3px;
     background-color: transparent;
     border:none;
 }
@@ -42,17 +42,21 @@
 }
 
 #homeLink{
-    color: #1c4c6d;
+    color: #2a82b4;
 }
 
 #homeLink:hover{
-    color:#4da3dc;
+    color: #eeeaff;
 }
 
 #freetrial{
     background-color: #4da3dc;
     color: #FFFFFF;
     border-radius: 25px;
+}
+
+#freetrial:hover{
+    color:#1c4c6d;
 }
 
 .myCar h1{
